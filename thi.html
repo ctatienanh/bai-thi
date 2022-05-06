@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Nhap diem:</h1>
+<input type="number" id="diem">
+<input type="button" value="click" onclick="add()">
+<input type="button" value="timmax" onclick="checkmax()" >
+<h2> danh sach diem nhap vao:</h2>
+<h2 id="display"></h2>
+<h2> diem cao nhat trong mang:</h2>
+<h2 id="displaymax"> </h2>
+</body>
+</html>
+<script>
+
+
+    let arr =[];
+    function add() {
+        let a = document.getElementById("diem").value
+        arr.push(a);
+        show();
+        document.getElementById("diem").value =""
+    }
+
+    function show() {
+        let b=""
+
+        for (let i=0; i < arr.length; i++){
+            b += arr[i] +" , ";
+            }
+        document.getElementById("display").innerHTML = b
+        }
+
+    function checkmax() {
+        let max = arr[0];
+        for (let j=1; j<arr.length; j++){
+            if (max < arr[j])
+            {
+                max = arr[j];
+            }
+        }
+        document.getElementById("displaymax").innerHTML = max;
+    }
+
+
+</script>

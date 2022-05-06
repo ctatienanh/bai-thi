@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let g = prompt("Nhập số nguyên g :(g<100000)");
+    function isFibonacci(x) {
+        let a = 0;
+        let b = 1;
+        let sum = 0;
+        let check ;
+        for (let i = 0; i < 100; i++) {
+            sum = a + b;
+            if (x == sum) {
+                check = true ;
+                break;
+            }
+            a = b;
+            b = sum;
+        }
+        if (check){
+            alert(g + " thuoc day fibonacci");
+        }else {
+            alert(g + " ko thuoc day fibonacci")
+        }
+    }
+
+    isFibonacci(g)
+</script>

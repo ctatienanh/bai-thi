@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+   let num =[1,2,3,4,5];
+
+function tryRemoveFromArray(arr,x)
+{
+for (let i=0; i< arr.length; i++){
+    if (x == arr[i]){
+            arr.splice(i,1)
+    }
+}
+    console.log(arr);
+return arr;
+}
+    let x = prompt("nhap x");
+   console.log(tryRemoveFromArray(num,x));
+
+</script>
