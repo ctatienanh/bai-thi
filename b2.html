@@ -9,17 +9,17 @@
 </body>
 </html>
 <script>
-   let num =[1,2,3,4,5];
-
+   let num =[1,2,3,2,2,2,2,2,2,2,4,5];
+let arrd = [];
 function tryRemoveFromArray(arr,x)
 {
 for (let i=0; i< arr.length; i++){
-    if (x == arr[i]){
-            arr.splice(i,1)
+    if (x != arr[i]){
+        arrd.push(arr[i]);
     }
 }
-    console.log(arr);
-return arr;
+    console.log(arrd);
+return arrd;
 }
     let x = prompt("nhap x");
    console.log(tryRemoveFromArray(num,x));
